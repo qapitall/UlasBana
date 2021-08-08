@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".Main2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:background="@drawable/tt"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="bottom|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bana Ulaş" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="top|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColorLink="@android:color/holo_blue_dark"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.035" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/tt"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Süre: 0"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.915"
+                            app:layout_constraintStart_toEndOf="@+id/textNumber"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.387" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="top|center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top|center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/score_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Skor: 0"
+                                    app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+                                    app:layout_constraintEnd_toStartOf="@+id/textTime"
+                                    app:layout_constraintHorizontal_bias="0.978"
+                                    app:layout_constraintStart_toEndOf="@+id/textNumber" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top|center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/levelText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Seviye: 0" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.95"
+        android:background="@drawable/test"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            style="@style/Base.TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/textSum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/text"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="@drawable/btn_red"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:background="@drawable/btn_white"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:background="@drawable/btn_blue"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:background="@drawable/btn_yellow"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:background="@drawable/btn_yellow"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/text6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:background="@drawable/btn_blue"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:background="@drawable/btn_red"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text11"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:background="@drawable/btn_white"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:background="@drawable/btn_red"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:background="@drawable/btn_yellow"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text10"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:background="@drawable/btn_white"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text12"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:background="@drawable/btn_blue"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text16"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:background="@drawable/btn_blue"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text15"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:background="@drawable/btn_white"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text14"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:background="@drawable/btn_yellow"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/text13"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:background="@drawable/btn_red"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+
+        </GridLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.95"
+        android:background="@drawable/test"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/tt"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
